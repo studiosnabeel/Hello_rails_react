@@ -1,15 +1,13 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
   get 'api/greetings'
-  # get 'root/index'
+  # get '/greeting', to: 'pages#greeting', as: 'greeting'
+
+  # root 'root#index'
   root 'root#index'
-
-  namespace :api do
-    get 'messages', to: 'api#messages'
-  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  # namespace :api do
+  #   get 'greeting', to: 'api#greetings'
+  # end
   # Defines the root path route ("/")
   # root "articles#index"
 end
